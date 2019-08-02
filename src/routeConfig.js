@@ -8,10 +8,4 @@ const routes = [
     {path: "/login",component: Login, name: "login"},
     {path: "/hiddenDangers", component: HiddenDangers, name:"hiddenDangers"}
 ]
-// const routeConfig = <Router>
-//     <Route path="/" component={App}>
-//     <Route path="about" component={Login} />
-//     <Route path="inbox" component={HiddenDangers} />
-//     </Route>
-// </Router>
 export default routes;

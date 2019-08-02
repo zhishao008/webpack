@@ -3,31 +3,16 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {HashRouter, BrowserRouter, Route, Switch } from 'react-router-dom';
 import routes from "./routeConfig";
-import App from "./app.js";
-import Login from "./component/login/login.js";
-// let RouteConfig = 
-// const Tacos = ({ match }) => (
-//     // here's a nested div
-//     <div>
-//       {/* here's a nested Route,
-//           match.url helps us make a relative path */}
-//       <Route path={match.url + "/login"} component={Login} />
-//     </div>
-//   );
-
-const HomePage =() => <div>Home Page</div>
-const UsersPage = () => <div>Users Page</div>
-  
-
-ReactDOM.render(<BrowserRouter>
+import App from "./app";
+import Login from "./component/login/login";
+import HiddenDangers from "./component/hiddenDangers/index";
+const routeConfig = <BrowserRouter>
     <Switch>
-        <Route exact path='/' component={App}>
-        {/* <Route path='login' component={Login} /> */}
-        {/* <Route path='/register' component={Register} /> */}
-        <Route path="/app" component={HomePage} />
-        <Route path="/users" component={UsersPage} />
-        </Route>
+        <Route exact path='/' component={App} />
+        <Route path='/login' component={Login} />
+        <Route path='/hidden' component={HiddenDangers} />
     </Switch>
-</BrowserRouter>, document.body);
+</BrowserRouter>;
+ReactDOM.render(routeConfig, document.body);

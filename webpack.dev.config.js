@@ -19,7 +19,8 @@ module.exports = {
         filename:"[name].[hash:8].js",
         chunkFilename :"[name].[chunkhash].js",
         hotUpdateChunkFilename: 'hot/hot-update.js',
-        hotUpdateMainFilename: 'hot/hot-update.json'
+        hotUpdateMainFilename: 'hot/hot-update.json',
+        publicPath: "/"
     },
     module:{
         rules: [
@@ -87,7 +88,7 @@ module.exports = {
     },
     // devServer: {
     //     contextBase: "./dist",  // 本地服务器所加载的页面所在目录
-    //     historyApiFallback: true,  //不跳转
+    //     historyApiFallback: true,  //不跳转   404 重定向  【很重要】
     //     inline: true,  // 实时刷新
     //     port: 3000,
     //     open: true, //自动打开浏览器
