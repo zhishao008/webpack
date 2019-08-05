@@ -2,24 +2,26 @@
  * 展示组件
  */
 import React, { Component } from 'react';
-class Login extends Component {
+export default class Login extends Component {
     componentDidMount(){
         console.log(this.props);
     }
     render(){
         return <div>
-            <div>login</div>
-            <div>{this.props.name}</div>
-            <button onClick={this._changeName}>change name</button>
-            <button onClick={this._goApp}>go app</button>
+            <h1>Login Page</h1>
+            <h2>这里展示的是ducks层的数据name： {this.props.name}</h2>
+            <hr />
+            <h2><button onClick={this._changeName}>Change name</button></h2>
+            <hr />
+            <h2><button onClick={this._goApp}>Go app page</button></h2>
         </div>
     }
 
     _changeName = () => {
-        this.props.changeName("hahah")
+        this.props.changeName("users")
     }
+    
     _goApp = () => {
         window.goRoute("app");
     }
 }
-export default Login;

@@ -28,9 +28,8 @@ const store = createStore(rootReducers);
 window.$getState = store.getState();
 const routeConfig = <BrowserRouter>
     <Switch>
-        <Route exact path="/" component={Index}/>
-        <Route path='/app' component={App} />
-        <Route path='/login' component={Login} />
+        <Route exact path="/" component={Login}/>
+        <Route path='/app' component={App} />>
         <Route path='/hidden' component={HiddenDangers} />
     </Switch>
 </BrowserRouter>;

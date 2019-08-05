@@ -6,7 +6,7 @@ const CHANGE_NAME = "CHANGE_NAME";
  * 初始化state
  */
 const initialState = {
-    name: "lizhi"
+    name: "admin"
 }
 /**
  * 声明reducers

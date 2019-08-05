@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.less';
-import Index from "./test16.8";
+import Index from "./container/react16";
 import { Link,Route,Switch,Redirect } from "react-router-dom";
 const Route1 = ()=> <div>I am router1</div>
 const Route2 = ()=> <div>I am router2</div>
