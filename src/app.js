@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.less';
 // import ZhiReactIndex from "./test16.8";
-import Login from "./component/login/login";
+import Login from "./container/login";
 import { Router,Link,Route } from "react-router-dom";
 const HomePage =() => <div>Home Page</div>
 class App extends Component {
