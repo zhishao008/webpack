@@ -6,7 +6,7 @@ export default class Lazy extends Component {
     render(){
         return (
             <div>
-                <Suspense callback={<div>Loading...</div>}>
+                <Suspense fallback={<div>Loading...</div>}>
                     <Com1 />
                     <Com2 />
                 </Suspense>

@@ -9,7 +9,7 @@ import RenderProps from "./render props/mouseTracker";
 import ForwardRef from "./forwardRef";
 import Fiber from "./fiber";
 import Hooks from "./hooks/index";
-// import Lazy from "./lazy-suspense/lazy";
+import Lazy from "./lazy-suspense/lazy";
 export default class Index extends Component {
   constructor(props){
     super(props);
@@ -43,13 +43,13 @@ export default class Index extends Component {
         <Provider>
             <Consumer/>
         </Provider>
-        <RenderProps />
+        {/* <RenderProps /> */}
         <ForwardRef name={this.state.name} age={this.state.age}/>
         <Fiber>   
           <button onClick={this.fibers}>props change1</button>
           <button onClick={this.fiberss}>props change2</button>
         </Fiber>
-        {/* <Lazy /> */}
+        <Lazy />
         <Hooks />
       </div>
     );
