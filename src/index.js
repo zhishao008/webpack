@@ -29,8 +29,8 @@ window.$getState = store.getState();
 const routeConfig = <BrowserRouter>
     <Switch>
         <Route exact path="/" component={Login}/>
-        <Route path='/app' component={App} />>
-        <Route path='/hidden' component={HiddenDangers} />
+        <Route path='/app' component={App} />
+        <Route path='/hidden:name' component={HiddenDangers} />
     </Switch>
 </BrowserRouter>;
 ReactDOM.render(<Provider store={store}>{routeConfig}</Provider>, document.body);

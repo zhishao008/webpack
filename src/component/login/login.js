@@ -14,6 +14,8 @@ export default class Login extends Component {
             <h2><button onClick={this._changeName}>Change name</button></h2>
             <hr />
             <h2><button onClick={this._goApp}>Go app page</button></h2>
+            <hr />
+            <h2><button onClick={this._goHidden}>Go hidden page</button></h2>
         </div>
     }
 
@@ -23,5 +25,8 @@ export default class Login extends Component {
     
     _goApp = () => {
         window.goRoute("app");
+    }
+    _goHidden = () => {
+        window.goRoute({ pathname:'/hidden:lizhi/'});
     }
 }
