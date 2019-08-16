@@ -20,13 +20,13 @@ export default class Login extends Component {
     }
 
     _changeName = () => {
-        this.props.changeName("users")
+        this.props.changeName("admin1")
     }
     
     _goApp = () => {
         window.goRoute("app");
     }
     _goHidden = () => {
-        window.goRoute({ pathname:'/hidden:lizhi/'});
+        window.goRoute({ pathname:'hidden'});
     }
 }

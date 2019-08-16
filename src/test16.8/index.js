@@ -21,7 +21,7 @@ export default class Index extends Component {
     // this._checkoutDialog = this._checkoutDialog.bind(this);
   }
   componentDidMount(){
-      console.log(this.myRef)
+      // console.log(this.myRef)
   }
   //生命周期测试
   fibers = () => {
@@ -31,41 +31,41 @@ export default class Index extends Component {
     this.setState({age: 20})
   }
   _checkoutDialog = v => {
-    console.log("_checkoutDialog = " + v);
+    // console.log("_checkoutDialog = " + v);s
     this.props.changeStatus(v);
   }
   render() {
     const { status } = this.props;
-    console.log("dialogStatus = " + status);
     return (
       <div className="root">
         <hr />
-        <div ref={this.myRef}>ref</div>
-        <hr />
+        {/* <div ref={this.myRef}>ref</div> */}
+        {/* <hr />
         <RenderTest />
-        <hr />
+        <hr /> */}
         {/* <ErrorBoundAry /> */}
         <hr />
         <h2><button onClick={()=>this._checkoutDialog(true)}>弹出 一个 Dialog</button></h2>
         { status ? <CreatePortal><span onClick={()=>this._checkoutDialog(false)}>I am a Dialog</span></CreatePortal> : null }
-        <hr />
+        {/* <hr />
         <Fragment />
-        <hr />
-        <Provider>
+        <hr /> */}
+        {/* <Provider>
             <Consumer/>
-        </Provider>
-        <hr />
+        </Provider> */}
+        {/* <hr /> */}
         {/* <RenderProps /> */}
-        <ForwardRef name={this.state.name} age={this.state.age}/>
+        {/* <ForwardRef name={this.state.name} age={this.state.age}/> */}
         <hr />
+        {/* 生命周期 */}
         <Fiber>   
-          <button onClick={this.fibers}>props change1</button>
-          <button onClick={this.fiberss}>props change2</button>
+          <button onClick={this.fibers}>props change</button>
+          {/* <button onClick={this.fiberss}>props change2</button> */}
         </Fiber>
-        <hr />
+        {/* <hr />
         <Lazy />
         <hr />
-        <Hooks />
+        <Hooks /> */}
       </div>
     );
   }

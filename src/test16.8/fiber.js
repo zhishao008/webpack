@@ -54,9 +54,9 @@ export default class Fiber extends Component {
     }
     render(){
         return [
-            <div key="1">生命周期{this.state.flag}</div>,
-            <div key="123">{this.props.children}</div>,
-            <button onClick={this.click} key="1w">setState</button>,
+            <h2 key="1">生命周期{this.state.flag}</h2>,
+            <h3 key="123">{this.props.children}</h3>,
+            <h3><button onClick={this.click} key="1w">state change</button></h3>,
             <div key="12">{this.props.name}</div>
         ]
     }
