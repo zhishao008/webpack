@@ -15,3 +15,5 @@ redux
 react 16.8 新特性
 
 React 环境配置 
+
+观察者模式  发布订阅 模式 https://segmentfault.com/a/1190000019722065
