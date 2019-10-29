@@ -2,10 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import App from "./app";
 import Login from "./container/login";
+import Mode from "./component/mode";
 import { createBrowserHistory } from 'history';
 
 import rootReducers from "./ducks/index";
@@ -23,8 +24,9 @@ const store = createStore(rootReducers);
 window.$getState = store.getState();
 const routeConfig = <BrowserRouter>
   <Switch>
-    <Route exact path="/" component={Login} />
+    <Route exact path="/" component={Mode} />
     <Route path='/app' component={App} />
+    <Route path='/mode' component={Login} />
   </Switch>
 </BrowserRouter>;
-ReactDOM.render(<Provider store={store}>{routeConfig}</Provider>, document.body);
+ReactDOM.render(<Provider store={store}>{routeConfig}</Provider>, document.getElementById('root'));
