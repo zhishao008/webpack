@@ -7,6 +7,7 @@ import { createStore } from 'redux';
 import App from "./app";
 import Login from "./container/login";
 import Mode from "./component/mode";
+import Reusefunc from "./component/reusefunc";
 import { createBrowserHistory } from 'history';
 
 import rootReducers from "./ducks/index";
@@ -24,9 +25,10 @@ const store = createStore(rootReducers);
 window.$getState = store.getState();
 const routeConfig = <BrowserRouter>
   <Switch>
-    <Route exact path="/" component={Mode} />
+    <Route exact path="/" component={Reusefunc} />
+    <Route path="/mode" component={Mode} />
     <Route path='/app' component={App} />
-    <Route path='/mode' component={Login} />
+    <Route path='/login' component={Login} />
   </Switch>
 </BrowserRouter>;
 ReactDOM.render(<Provider store={store}>{routeConfig}</Provider>, document.getElementById('root'));
