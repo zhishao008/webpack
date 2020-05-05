@@ -1,9 +1,11 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.base.config');
+const path = require("path");
+const BUILD_PATH = path.resolve(__dirname, "./dist");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
-
+// const HotModuleReplacementPlugin = require("");
 // const ExtractTextPlugin = require("extract-text-webpack-plugin");  webpack4以下用
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");  //webpack4以上使用
 
@@ -101,7 +103,7 @@ module.exports = {
     // },
     plugins: [
         new CleanWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             chunk: ["bundle"],
             title: "bundle1",
