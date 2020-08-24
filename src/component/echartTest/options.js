@@ -1,18 +1,26 @@
 export default {
   ChartLine1: {
+    title: {
+      text: '园区人员数量走势图'
+    },
     xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      name: "时间",
+      type: 'category',
+      data: ['0', '2', '4', '6', '8', '10', '12']
     },
     yAxis: {
-        type: 'value'
+      name: "值",
+      type: 'value'
     },
     series: [{
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line'
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      type: 'line'
     }]
   },
   ChartLine2: {
+    title: {
+      text: '危险源报警点个数'
+    },
     xAxis: {
         type: 'category',
         boundaryGap: false,
@@ -29,13 +37,13 @@ export default {
   },
   ChartLine3: {
     title: {
-        text: '折线图堆叠'
+        text: '危险源报警点等级分布'
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+        data: ['一级', '二级', '三级', '四级']
     },
     grid: {
         left: '3%',
@@ -58,40 +66,34 @@ export default {
     },
     series: [
         {
-            name: '邮件营销',
+            name: '一级',
             type: 'line',
             stack: '总量',
             data: [120, 132, 101, 134, 90, 230, 210]
         },
         {
-            name: '联盟广告',
+            name: '二级',
             type: 'line',
             stack: '总量',
             data: [220, 182, 191, 234, 290, 330, 310]
         },
         {
-            name: '视频广告',
+            name: '三级',
             type: 'line',
             stack: '总量',
             data: [150, 232, 201, 154, 190, 330, 410]
         },
         {
-            name: '直接访问',
+            name: '四级',
             type: 'line',
             stack: '总量',
             data: [320, 332, 301, 334, 390, 330, 320]
-        },
-        {
-            name: '搜索引擎',
-            type: 'line',
-            stack: '总量',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
         }
     ]
   },
   ChartLine4: {
     title: {
-        text: '堆叠区域图'
+        text: ''
     },
     tooltip: {
         trigger: 'axis',
@@ -173,15 +175,20 @@ export default {
     ]
   },
   Histogram1: {
+    title: {
+      text: '园区报警类型统计图'
+    },
     xAxis: {
+        name: "类型",
         type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        data: ['闯入报警', '串岗报警', '缺员报警',]
     },
     yAxis: {
+        name: "数量",
         type: 'value'
     },
     series: [{
-        data: [120, 200, 150, 80, 70, 110, 130],
+        data: [25, 12, 30],
         type: 'bar',
         showBackground: true,
         backgroundStyle: {

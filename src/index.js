@@ -7,6 +7,7 @@ import { createStore } from 'redux';
 import App from "./app";
 import Login from "./container/login";
 import EchartTest from "./component/echartTest";
+import AlertComponent from "./component/alertComponent";
 import Mode from "./component/mode";
 import Reusefunc from "./component/reusefunc";
 import { createBrowserHistory } from 'history';
@@ -27,6 +28,7 @@ window.$getState = store.getState();
 const routeConfig = <BrowserRouter>
   <Switch>
     <Route exact path="/" component={EchartTest} />
+    <Route path="/echart" component={EchartTest} />
     <Route path="/mode" component={Mode} />
     <Route path='/app' component={App} />
     <Route path='/login' component={Login} />
