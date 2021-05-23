@@ -92,15 +92,15 @@ module.exports = {
     resolve: {
         extensions: [".js",".jsx",".json"]  //定义了解析模块时候的配置，可以指定模块的后缀，这样在引入的时候可以不需要写后缀，第一个参数为 "" 或者不写
     },
-    // devServer: {
-    //     contextBase: "./dist",  // 本地服务器所加载的页面所在目录
-    //     historyApiFallback: true,  //不跳转   404 重定向  【很重要】
-    //     inline: true,  // 实时刷新
-    //     port: 3000,
-    //     open: true, //自动打开浏览器
-    //     hot: true,  //热更新
-    //     compress: true  //开启gzip  会压缩代码
-    // },
+    devServer: {
+        contentBase: "./dist",  // 本地服务器所加载的页面所在目录
+        historyApiFallback: true,  //不跳转   404 重定向  【很重要】
+        inline: true,  // 实时刷新
+        port: 3000,
+        //open: true, //自动打开浏览器
+        hot: true,  //热更新
+        compress: true  //开启gzip  会压缩代码
+    },
     plugins: [
         new CleanWebpackPlugin(),
         // new webpack.HotModuleReplacementPlugin(),
