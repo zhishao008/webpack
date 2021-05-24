@@ -27,3 +27,15 @@ export const changeName = name => ({
     type: 'CHANGE_NAME',
     name: name
 })
+
+/**
+ * 声明 action 使用了redux-thunk
+ */
+export const asyncChangeName = (name) =>{
+    return dispatch => {
+        setTimeout(() => {
+            console.log('name = ', name);
+            dispatch(changeName(name))
+        }, 2000)   
+    }
+ }
