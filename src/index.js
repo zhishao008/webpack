@@ -27,7 +27,7 @@ const store = createStore(rootReducers);
 window.$getState = store.getState();
 const routeConfig = <BrowserRouter>
   <Switch>
-    <Route exact path="/" component={EchartTest} />
+    <Route exact path="/" component={AlertComponent} />
     <Route path="/echart" component={EchartTest} />
     <Route path="/mode" component={Mode} />
     <Route path='/app' component={App} />

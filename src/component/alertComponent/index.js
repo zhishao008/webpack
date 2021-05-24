@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
- 
-import Alert from "./alert.js";
-import Test from "./test.js";
+import Alert from "./msgDialog";
+import Test from "./test";
  
 class Two extends Component {
     constructor(props){
@@ -15,8 +14,8 @@ class Two extends Component {
       Alert({
         containerElem: document.getElementById("root"),
         contentElem: <Test aa="123"/>,
-        alertTip:"这是一个测试弹框",
-        closeAlert:function(){
+        alertTip: "这是一个消息弹框",
+        closeAlert: function(){
             console.log("关闭了...");
         }
       });

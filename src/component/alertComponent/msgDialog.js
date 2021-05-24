@@ -1,6 +1,6 @@
-import React, { Component, Children } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './alert.css';
+import './msgDialog.css';
 class Alert extends Component{
 
   constructor(props) {
@@ -9,12 +9,9 @@ class Alert extends Component{
   }
   componentDidMount() {
     console.log('1')
-    const _this = this;
-    setTimeout(function () {
-      _this.containerNode.current.style.opacity = 1;
-      _this.containerNode.current.style.width = "100%";
-      _this.containerNode.current.style.height = "100%";
-      _this.containerNode.current.style.transform = "scale(1)";
+    setTimeout(() => {
+      this.containerNode.current.style.opacity = 1;
+      this.containerNode.current.style.height = "200px";
     }, 0);
     
   }
@@ -26,11 +23,12 @@ class Alert extends Component{
 
   render(){
     return (
-      <div className="alert-con" ref={this.containerNode}>
-          <div className="alert-context">
-          <div className="alert-content-detail">{this.props.alertTip}</div>
-            {this.props.contentElem}
-            <div className="comfirm" onClick={this.confirm}>确认</div>
+      <div className="msgDialog-con" ref={this.containerNode}>
+        <div className="msgDialog-title">危险源报警</div>
+        <div className="msgDialog-content">危险源报警xxxxxxx</div>
+          <div className="msgDialog-btns">
+            <div className="btns-comfirm" onClick={this.confirm}>处理</div>
+            <div className="btns-close" onClick={this.confirm}>关闭</div>
           </div>
         </div>
     );
